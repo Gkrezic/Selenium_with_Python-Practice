@@ -191,14 +191,14 @@ class Browser:
 with Browser(teardown=True) as test:
     test.open_first_page("https://www.booking.com/")
     test.choose_your_language('Hrvatski')
-    test.change_currency_menu(change_currency=True, new_currency='BAM')
-    test.choose_place_to_go('Mostar')
+    test.change_currency_menu(change_currency=True, new_currency='HRK')
+    test.choose_place_to_go('Split')
     test.check_in_date('2022-10-01') #date format YYYY-MM-DD
     test.check_out_date('2022-10-03') #date format YYYY-MM-DD
     test.number_of_guests(adults=1, children=4)
     test.children_age(age1=5, age2=7, age3=4, age4=15)
     test.search()
-    test.star_rating_filtration(3)
+    test.star_rating_filtration(4)
     test.lowest_price_sorting()
     print('Everything is ok')
 
